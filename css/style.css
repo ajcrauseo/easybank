@@ -25,11 +25,16 @@ html {
 body {
     background-color: var(--light-grayish-blue);
 }
+
+/* HEADER */
+
 .header {
     display: flex;
     align-items: center;
     background-color: var(--white);
-    height: 15vh;
+    height: 14vh;
+    position: relative;
+    z-index: 1;
 }
 .header--img {
     width: 175px;
@@ -51,6 +56,7 @@ body {
     bottom: 0;
     transform: translateY(-150%);
     transition: transform 0.5s ease-in;
+    background-color: var(--light-grayish-blue);
 }
 .header--navbar li {
     list-style: none;
@@ -101,4 +107,66 @@ body {
 }
 .toggle .line3 {
     transform: rotate(45deg) translate(-4px,-6px);
+}
+
+/* ------------- HERO -------------- */
+
+.hero {
+    height: 85vh;
+}
+
+.hero--img {
+    background-image: url(../assets/images/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: bottom;
+
+    
+    display: flex;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+.hero--img img {
+    width: 90vw;
+    transform: translateY(-110px);
+
+    /* position: relative; */
+    object-fit: cover;
+}
+
+.hero--description {
+    padding: 2rem;
+    position: relative;
+    top: -110px;
+    z-index: 1;
+
+    background-color: var(--light-grayish-blue);
+    text-align: center;
+}
+
+.hero--description h1 {
+    font-size: 3.2rem;
+    font-weight: 400;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.hero--description p {
+    font-size: 1.5rem;
+    color: var(--grayish-blue);
+    padding-bottom: 3rem;
+}
+
+.button {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 3rem;
+    /* background-color: var(--lime-green); */
+    background: linear-gradient(90deg, rgba(49,211,92,1) 0%, rgba(45,194,170,1) 65%, rgba(43,183,218,1) 100%);
+    color: var(--white);
+    padding: 1.5rem 3rem;
 }

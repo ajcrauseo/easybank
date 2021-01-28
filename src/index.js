@@ -24,8 +24,15 @@ const navSlide = () => {
     // Close Nav with Links
     links.forEach(item => {
         item.addEventListener('click', () => {
-        nav.classList.toggle('nav-active');
-        burger.classList.toggle('toggle');
+            nav.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+            navLinks.forEach((link, index) => {
+                if(link.style.animation) {
+                    link.style.animation = ''
+                } else {
+                    link.style.animation = `navbarlinksFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                }
+            });
         })
     })
 }
