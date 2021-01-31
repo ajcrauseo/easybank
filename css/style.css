@@ -23,7 +23,7 @@ html {
     font-family: var(--principal-font);
 }
 body {
-    background-color: var(--light-grayish-blue);
+    background-color: var(--very-light-gray);
 }
 
 /* HEADER */
@@ -32,13 +32,16 @@ body {
     display: flex;
     align-items: center;
     background-color: var(--white);
-    height: 14vh;
+    height: 12vh;
     position: relative;
     z-index: 1;
 }
+.header .button {
+    display: none;
+}
 .header--img {
-    width: 175px;
-    height: 25px;
+    width: 160px;
+    height: 20px;
     padding-left: 2rem;
 }
 .header--links {
@@ -112,7 +115,8 @@ body {
 /* ------------- HERO -------------- */
 
 .hero {
-    height: 85vh;
+    height: 88vh;
+    margin-bottom: 6rem;
 }
 
 .hero--img {
@@ -120,30 +124,27 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-position-y: bottom;
+    /* background-position-y: center; */
 
-    
+    height: 44vh;
     display: flex;
     justify-content: center;
+    /* padding-bottom: 3rem; */
 
     box-sizing: border-box;
 }
 
 .hero--img img {
-    width: 90vw;
-    transform: translateY(-110px);
-
-    /* position: relative; */
-    object-fit: cover;
+    width: 310px;
+    height: 380px;
+    transform: translateY(-120px);
+    
 }
 
 .hero--description {
     padding: 2rem;
-    position: relative;
-    top: -110px;
-    z-index: 1;
 
-    background-color: var(--light-grayish-blue);
+    background-color: var(--very-light-gray);
     text-align: center;
 }
 
@@ -155,7 +156,7 @@ body {
 }
 
 .hero--description p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--grayish-blue);
     padding-bottom: 3rem;
 }
@@ -164,9 +165,166 @@ body {
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: 600;
+    width: 20rem;
     border-radius: 3rem;
-    /* background-color: var(--lime-green); */
     background: linear-gradient(90deg, rgba(49,211,92,1) 0%, rgba(45,194,170,1) 65%, rgba(43,183,218,1) 100%);
     color: var(--white);
     padding: 1.5rem 3rem;
+    align-self: center;
+}
+
+/* -------- DESCRIPTION SECTION --------- */
+
+.description {
+    background-color: var(--light-grayish-blue);
+    color: var(--dark-blue);
+    padding: 6rem 2rem 0;
+    text-align: center;
+}
+
+.description h2 {
+    font-size: 3.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.description--text {
+    font-size: 1.6rem;
+    color: var(--grayish-blue);
+    margin-bottom: 4rem;
+}
+
+.description--cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.description--card {
+    margin-bottom: 4rem;
+    min-width: 25rem;
+    max-width: 32rem;
+}
+
+.description--card img,
+.description--card h4, 
+.description--card p {
+    padding-bottom: 2rem;
+}
+
+.description--card p {
+    color: var(--grayish-blue);
+}
+
+/* --------- BLOG ------------ */
+
+.blog {
+    color: var(--dark-blue);
+    padding: 6rem 2rem 0;
+}
+
+.blog h2 {
+    font-size: 3.2rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.blog--cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog--card {
+    margin-bottom: 4rem;
+    min-width: 25rem;
+    max-width: 32rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.blog--card h4,
+.blog--card small,
+.blog--card p {
+    padding: 2rem;
+    color: var(--grayish-blue);
+}
+
+.blog--card img {
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.blog--card h4 {
+    padding-top: 2rem;
+    color: var(--dark-blue);
+    font-weight: 400;
+}
+
+.blog--card small {
+    font-size: 1.4rem;
+}
+
+.blog--card p {
+    font-size: 1.6rem;
+    padding: 0 2rem 4rem;
+}
+
+/* --------- FOOTER ----------- */
+
+.footer {
+    height: 90vh;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: grid;
+    grid-template-rows: auto auto auto;
+    row-gap: 30px;
+    padding: 4rem;
+    text-align: center;
+}
+
+.footer--top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-media img {
+    margin: 0 .5rem;
+    width: 30px;
+    height: 30px;
+}
+
+.footer--middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer--middle ul {
+    display: flex;
+    height: 47.5%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer--middle li {
+    list-style: none;
+}
+
+.footer--middle a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer--end {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footer--end p {
+    margin-top: 2rem;
+    color: var(--grayish-blue);
 }
