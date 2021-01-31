@@ -89,6 +89,7 @@ body {
 .nav-active {
     display: flex;
     transform: translateY(0);
+    box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.33);
 }
 
 @keyframes navbarlinksFade {
