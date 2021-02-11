@@ -50,6 +50,19 @@
     .header--navbar a:hover {
         color: var(--lime-green);
     }
+    .nav-active {
+        box-shadow: initial;
+    }
+    @keyframes navbarlinksFade {
+        from{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
